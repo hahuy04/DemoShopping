@@ -2106,6 +2106,10 @@ iframe{
 .sign__button-btn1{
     margin-left: 100px;
 }
+..sign__button{
+    display: flex;
+    margin-left:-40px;
+}
 @media screen and (max-width: 480px) {
         .sigup{
         height:640px;
