@@ -82,7 +82,7 @@ body {
 canvas {
     margin-top: 200px;
     margin-left: 70px;
-    display: block;
+    display: none;
     position:fixed;
 }
 .loading-overlay {
