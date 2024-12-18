@@ -90,18 +90,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 85%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .modal__body1 {
-    position: relative;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     max-width: 800px;
     background-color: #fff;
     border-radius: 8px;
