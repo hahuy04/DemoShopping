@@ -5,7 +5,8 @@ const closeButton1 = document.querySelector('.close');
 const closesignup = document.querySelector('.sign__button-btn2');
 const overlay = document.querySelector('.modal__overlay');
 const form = document.querySelector('.sale-off__form');
-
+const loginForm = document.getElementById('login');
+const signupLink = document.querySelector('.Signup a');
 // Đảm bảo modal không hiển thị khi tải lại trang
 modal.classList.remove('active');
 
@@ -15,6 +16,15 @@ document.querySelector('.Signup a').addEventListener('click', (e) => {
     modal.classList.add('active'); // Hiển thị modal
 });
 
+
+signupLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+    
+    // Hiển thị modal và ẩn form login
+    modal.style.display = 'flex'; // Hoặc sử dụng class để hiển thị
+    loginForm.style.display = 'none';
+  });
+  
 // Đóng modal khi nhấn vào overlay hoặc nút đóng
 closeButton.addEventListener('click', () => {
     modal.classList.remove('active');
