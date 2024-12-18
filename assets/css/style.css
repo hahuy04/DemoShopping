@@ -2006,6 +2006,8 @@ iframe{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-botton:50px;
+    height: 500px;
     max-width: 800px;
     background-color: #fff;
     border-radius: 8px;
