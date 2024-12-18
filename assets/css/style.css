@@ -2013,6 +2013,7 @@ iframe{
 
 .sale-off__container {
     display: flex;
+    line-height: 15px;
     width: 100%;
 }
 
