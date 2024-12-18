@@ -96,11 +96,13 @@
 }
 
 .modal__body1 {
+    position: relative;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    line-height:15px;
     height: 100%;
     max-width: 800px;
     background-color: #fff;
