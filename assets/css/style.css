@@ -1981,11 +1981,7 @@ iframe{
     text-align: center;
 } */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 
 /* Modal Overlay */
@@ -2048,6 +2044,7 @@ iframe{
 
 .sale-off__form-group span {
     display: block;
+    margin-left:-40px;
     font-size: 0.9rem;
     color: red;
     
