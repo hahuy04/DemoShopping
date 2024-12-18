@@ -1,0 +1,193 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --first-color: hsl(260, 88%, 61%);
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 35%);
+    --body-color: hsl(250, 60%, 98%);
+    --container-color: #fff;
+    --shadow: hsla(0, 0%, 15%, .1);
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 80%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+.accordion-open .questions__item-title, .accordion-open .questions__description, .accordion-open{
+    color: #fff;
+}
+.questions__item-title{
+ margin-left: 45%;
+ background-color: var(--first-color);
+ padding: 1rem;
+ border-radius: 1rem;
+ color: #fff;
+}
+.questions__item-title:hover{
+    background-color: red;
+    color: var(--title-color);
+}
+.questions__header{
+    color: var(--title-color);
+    background-color: var(--body-color);
+    
+}
+.accordion-open .questions__header, .accordion-open .questions__content {
+    background-color: var(--body-color);
+    color: var(--title-color);
+}
+.menu {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+.button_new{
+    display: inline-block;
+    background: var(--first-color);
+    color: #fff;
+    border-radius: .3rem;
+    font-weight: var(--font-medium);
+}
+.button_new:hover{
+    color: var(--first-color--alt);
+}
+
+.button_new.active {
+    background-color: rgb(126, 126, 212) ;
+    color: white;
+}
+
+.list-phone {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    
+}
+
+.phone-item {
+    flex: 0 0 calc(20% - 10px); 
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    margin-bottom: var(--mb-2);
+    margin: 2rem 1rem 1rem 2rem;
+    
+}
+.list-phone img {
+    width: var(--w-140);
+    height: 100px;
+    object-fit: cover;
+}
+
+.phone-item:hover {
+    transform: scale(1.05);
+}
+
+.hide {
+    display: none;
+}
+button.active {
+    background-color: rgb(231, 104, 104);
+    color: white;
+}
+.phone-item-btn {
+    margin-bottom: -200px;
+    position: absolute;;
+    width: 100px;
+    font-size: var(--smaller-font-size);
+    height:20px;
+    color: white;
+}
+@media screen and (max-width: 750px) {
+    .list-phone {
+        width: 70%; /* Chiếm toàn bộ chiều rộng màn hình */
+        flex-direction: column; /* Các phần tử xếp theo cột */
+        gap: 20px; /* Tăng khoảng cách giữa các item */
+    }
+
+    .phone-item {
+        flex: 0 0 100%; /* Mỗi phần tử chiếm 100% chiều rộng */
+        margin: 1rem 0; /* Giảm khoảng cách xung quanh */
+    }
+
+    .list-phone img {
+        width: 100px; /* Điều chỉnh kích thước ảnh nhỏ hơn */
+        height: 80px;
+    }
+
+    .phone-item h3 {
+        font-size: 1.2rem; /* Điều chỉnh kích thước tiêu đề */
+    }
+
+    .phone-item-btn {
+         /* Đưa nút xuống dưới */
+         position: static;
+        margin-top: 10px;
+        font-size: 1rem; /* Tăng kích thước chữ của nút */
+    }
+    .shop__button{
+        margin-right: -70px;
+    }
+    .questions__header{
+        margin-left: -3rem;
+    }
+    .main__modal1{
+        margin-top: 12rem;
+        width: 20rem;
+        margin-left: 4rem;
+        justify-content: space-between;
+        justify-items: center;
+
+    }
+    .sale-off{
+        width: 300px;
+        box-shadow: none;
+    }
+    .product__images{
+        margin-top: -60px;
+    }
+    .button{
+        padding: .92rem .92rem .92rem;
+    }
+    .menu {
+        width: 105%;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin: 19px 0;
+    }
+    .menu .button{
+        width:5.2rem;
+    }
+}

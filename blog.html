@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"  class="js-color-style" href="assets/css/colors/color-1.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <title>Shopping</title>
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">
+                <i class="bx bxs-shopping-bags nav__logo-icon">H-Shopper</i>
+            </a>
+        
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Home</a>
+                    </li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                        <ul class="nav__submenu">
+                            <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">Shop page</a></li>
+                            <li class="nav__submenu-item"><a href="#product" class="nav__submenu-link">Other Products</a></li>
+                            <li class="nav__submenu-item"><a href="#about" class="nav__submenu-link">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link active-link ">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">Faq</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+        
+            <div class="nav__btns">
+                <div class="login__toggle" id="login-toggle">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="nav__shop" id="cart-shop">
+                    <span id="cart-count">0</span>
+                    <i class="bx bx-shopping-bag"></i>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+        
+    </header>>
+    <!--=============== CART ===============-->
+    <div class="cart show-cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart__close"></i>
+        <h2 class="cart__title-center">My cart</h2>
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-1.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Windbreaker</h3>
+                    <span class="cart__price">$12</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-2.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cardian Hoodie</h3>
+                    <span class="cart__price">$16</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-3.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cartoon</h3>
+                    <span class="cart__price">$10</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 Item</span>
+            <span class="cart__prices-total">$38</span>
+
+        </div>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login show-login" id="login">
+        <i class="bx bx-x login-close" id="login-close"></i>
+        <h2 class="login__title-center" style="font-weight: bold    ; ">Login</h2>
+
+        <form action="" class="login__form grid">
+            <div class="login__content">
+                <label for="" class="login__label">Email</label>
+                <input type="email" class="login__input" id="emails" placeholder="Enter your email">
+                <span style="color: red;" id="view-email"></span>
+            </div>
+
+
+            <div class="login__content">
+                <label for="" class="login__label">Password</label>
+                <input type="password" id="passwords" class="login__input" placeholder="Enter your password">
+                <span style="color: red;" id="view-password"></span>
+            </div>
+
+            <div>
+                <a href="#" class="button" id="login-submit" onclick="checked()">Sign in</a>
+            </div>
+            <div>
+                <p class="Signup">Not a member?<a href="registration.html">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+
+
+    <!--=============== MAIN ===============-->
+    <canvas id="canvas"></canvas>
+    <main class="main">
+        <!--=============== BLOG ===============-->
+        <section class="blog section container">
+            <h2 class="breadcrumb__title">Blog page</h2>
+            <h3 class="breadcrumb__subtitle">Home > <span>Blog</span></h3>
+
+            <div class="blog__container grid">
+                <div class="blog__post grid">
+                    <img src="assets/img/blog-1.webp" class="blog__img" alt="">
+
+                    <div class="blog__info grid">
+                        <p class="blog__details">5S Fashion là thương hiệu thời trang nam khá nổi tiếng với nhiều chi nhánh trên toàn quốc, trong đó có Phú Thọ. Thương hiệu này được nhiều cánh mày râu ưa chuộng bởi mang đến đa dạng các item từ áo thun, áo polo, áo sơ mi, quần tây, quần jean, áo khoác và nhiều phụ kiện khác nhau. Các item của 5S Fashion luôn chú trọng vào thiết kế tiện lợi, gọn nhẹ, khi mặc luôn thoải mái, độ bền màu cao cũng như kiểu dáng trẻ trung, phù hợp với nhiều lứa tuổi.</p>
+                        <h3 class="blog__title">Form Now We Are Cartified Web...</h3>
+                        <p class="blog__date">By Admin / Jan 12,2024</p>
+                        <div class="read__more">
+                            <a href="" class="button--link button--flex">Read More <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="blog__post grid">
+                    <img src="assets/img/blog-2.webp" class="blog__img" alt="">
+
+                    <div class="blog__info">
+                        <p class="blog__details">Điểm đặc biệt là các item của 5S Fashion có mức giá phải chăng, lại đảm bảo chất lượng tốt nhất. Cửa hàng 5S Fashion tại Phú Thọ còn sở hữu không gian rộng lớn, các mẫu thiết kế được trang trí, sắp xếp logic, rất dễ lựa đồ và phối chúng với nhau. Nếu bạn đang tìm kiếm shop quần áo nam Phú Thọ uy tín, giá phải chăng thì đừng bỏ qua cái tên 5S Fashion nhé!</p>
+                        <h3 class="blog__title">Form Now We Are Cartified Web...</h3>
+                        <p class="blog__date">By Admin / Jan 12,2024</p>
+                        <div class="read__more">
+                            <a href="" class="button--link button--flex">Read More <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog__post grid">
+                    <img src="assets/img/blog-1.webp" class="blog__img" alt="">
+
+                    <div class="blog__info">
+                        <p class="blog__details">Việt Nam khi mang đến những trang phục lịch lãm, thanh lịch và chỉn chu. Nổi bật nhất có thể kể đến những bộ vest lịch lãm, sang trọng giúp các quý ông trở nên sành điệu, cuốn hút, thích hợp để mặc đi làm, đi họp, đi sự kiện hoặc dùng trong cả ngày cưới!</p>
+                        <h3 class="blog__title">Form Now We Are Cartified Web...</h3>
+                        <p class="blog__date">By Admin / Jan 12,2024</p>
+                        <div class="read__more">
+                            <a href="" class="button--link button--flex">Read More <i class="bx bx-right-arrow-alt button__icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <i class="bx bx-chevron-left pagination__icon"></i>
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>&middot;&middot;&middot;</span>
+                <span>9</span>
+                <i class="bx bx-chevron-right pagination__icon"></i>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="bx bxs-shopping-bags footer__logo-icon"></i> H-Shopper
+                </a>
+                <p class="footer__description">
+                    Enjoy the biggest sale <br> of your life.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-instagram-alt"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="footer_content">
+                <h3 class="footer_title">About Us</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">About Us</a></li>
+                    <li><a href="#" class="footer_link">Customer Support</a></li>
+                    <li><a href="#" class="footer_link">Support Center</a></li>
+                </div>
+            </div>
+            
+            <div class="footer_content">
+                <h3 class="footer_title">Our Services</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">Shop</a></li>
+                    <li><a href="#" class="footer_link">Discounts</a></li>
+                    <li><a href="#" class="footer_link">Shipping mode</a></li>
+                </div>
+            </div>
+            
+            <div class="footer_content">
+                <h3 class="footer_title">Our Company</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">Register</a></li>
+                    <li><a href="#" class="footer_link">Contact Us</a></li>
+                    <li><a href="about.html" class="footer_link">About Us</a></li>
+                </div>
+            </div>
+        </div>
+        <span class="footer_copy">Copyright &copy; HuyDuc-Media</span>
+    </footer>
+    <div class="main__modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- Register Form -->
+            <div class="sale-off">
+                <div class="sale-off__container">
+                    <form action="#" class="sale-off__form">
+                        <div class="sale-off__form-group">
+                            <label for="text">Họ tên: </label>
+                            <input type="text" id="text" placeholder="Enter your name">
+                            <span id="error-text"></span>
+
+                            <label for="select">Năm sinh:</label>
+                            <select id="select">
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                            </select>
+                            <label for="email">Gmail:</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <span id="error-email"></span>
+                            
+                            <label for="user">Tên tài khoản:</label>
+                            <input type="text" id="user" placeholder="Enter your username">
+                            <span id="error-user"></span>
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                            <span id="error-password"></span>
+                            
+                            <label for="password">Nhập lại mật khẩu:</label>
+                            <input type="password" id="password-authentication" placeholder="Confirm your password">
+                            <span id="error-password-authentication"></span>
+                            <div class="sign__button">
+                                <button class="sign__button-btn1" type="button" onclick="checked()">Sign Up</button>
+                                <button class="sign__button-btn2" type="button" onclick="reset()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="image-container">
+                        <img src="assets/img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="sale-off__close">x</div>
+            </div>
+        </div>
+    </div>
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" id="scroll-up" class="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a>
+    <!--=============== STYLE SWITCHER ===============-->
+    <div class="style__switcher">
+        <div class="style__switcher-toggler s__icon">
+          <i class="bx bx-cog bx-spin"></i>
+        </div>
+      
+        <h4>Theme Colors</h4>
+      
+        <div class="theme__colors js-theme-colors">
+          <button 
+            type="button" 
+            data-js-theme-color="color-1" 
+            class="js-theme-color-item color-1 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-2" 
+            class="js-theme-color-item color-2 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-3" 
+            class="js-theme-color-item color-3 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-4" 
+            class="js-theme-color-item color-4 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-5" 
+            class="js-theme-color-item color-5 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+        </div>
+      </div>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/signup.js"></script> 
+</body>
+</html>

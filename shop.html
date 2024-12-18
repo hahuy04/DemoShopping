@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/details.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet"  class="js-color-style" href="assets/css/colors/color-1.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <title>Shopping</title>
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">
+                <i class="bx bxs-shopping-bags nav__logo-icon">H-Shopper</i>
+            </a>
+        
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Home</a>
+                    </li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="shop.html" class="nav__link active-link">Shop</a>
+                        <ul class="nav__submenu">
+                            <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">Shop page</a></li>
+                            <li class="nav__submenu-item"><a href="#product" class="nav__submenu-link">Other Products</a></li>
+                            <li class="nav__submenu-item"><a href="#about" class="nav__submenu-link">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link ">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">Faq</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+        
+            <div class="nav__btns">
+                <div class="login__toggle" id="login-toggle">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="nav__shop" id="cart-shop">
+                    <span id="cart-count">0</span>
+                    <i class="bx bx-shopping-bag"></i>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+        
+    </header>>
+
+    <!--=============== CART ===============-->
+    <div class="cart show-cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart__close"></i>
+        <h2 class="cart__title-center">My cart</h2>
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-1.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Windbreaker</h3>
+                    <span class="cart__price">$12</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-2.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cardian Hoodie</h3>
+                    <span class="cart__price">$16</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-3.png" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Cartoon</h3>
+                    <span class="cart__price">$10</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart_amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 Item</span>
+            <span class="cart__prices-total">$38</span>
+
+        </div>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login show-login" id="login">
+        <i class="bx bx-x login-close" id="login-close"></i>
+        <h2 class="login__title-center" style="font-weight: bold    ; ">Login</h2>
+
+        <form action="" class="login__form grid">
+            <div class="login__content">
+                <label for="" class="login__label">Email</label>
+                <input type="email" class="login__input" id="emails" placeholder="Enter your email">
+                <span style="color: red;" id="view-email"></span>
+            </div>
+
+
+            <div class="login__content">
+                <label for="" class="login__label">Password</label>
+                <input type="password" id="passwords" class="login__input" placeholder="Enter your password">
+                <span style="color: red;" id="view-password"></span>
+            </div>
+
+            <div>
+                <a href="#" class="button" id="login-submit" onclick="checked()">Sign in</a>
+            </div>
+            <div>
+                <p class="Signup">Not a member?<a href="">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+
+
+    <!--=============== MAIN ===============-->
+    <canvas id="canvas"></canvas>
+    <main class="main">
+        <!--=============== SHOP ===============-->
+        <section class="shop section container">
+            <h2 class="breadcrumb__title">Shop page</h2>
+            <h3 class="breadcrumb__subtitle">Home > <span>Shop</span></h3>
+
+            <div class="shop__container grid">
+                <div class="sidebar">
+                    <h3 class="filters__title">Seclect Filters</h3>
+                    <div class="filters__content">
+                        <h3 class="filters__subtitle">Condition</h3>
+
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>New</p><span>(13)</span>
+                        </div>
+                        
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Sale</p><span>(13)</span>
+                        </div>
+                    </div>
+
+
+                    <div class="filters__content">
+                        <h3 class="filters__subtitle">Size</h3>
+
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>s</p><span>(13)</span>
+                        </div>
+                        
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>M</p><span>(15)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>L</p><span>(6)</span>
+                        </div>
+                    </div>
+
+                    <div class="filters__content">
+                        <h3 class="filters__subtitle">Categories</h3>
+
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Men</p><span>(2)</span>
+                        </div>
+                        
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Women</p><span>(5)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Kids</p><span>(6)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Others</p><span>(7)</span>
+                        </div>
+                    </div>
+
+
+                    <div class="filters__content">
+                        <h3 class="filters__subtitle">Styles</h3>
+
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Casual</p><span>(2)</span>
+                        </div>
+                        
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Dressy</p><span>(5)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Girly</p><span>(6)</span>
+                        </div>
+                    </div>
+
+                    <div class="filters__content">
+                        <h3 class="filters__subtitle">Sub Categories</h3>
+
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Jackets</p><span>(2)</span>
+                        </div>
+                        
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>T-shirts</p><span>(5)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Accessories</p><span>(6)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Shoes</p><span>(7)</span>
+                        </div>
+                        <div class="filters">
+                            <input type="checkbox" name="" id="">
+                            <p>Coats</p><span>(7)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="shop__items grid">
+                    <div class="shop__content">
+                        <div class="shop__tag">New</div>
+                        <a href="" class="hillo"><img href="" src="assets/img/details-1.png" class="shop__img" alt=""></a>
+                        <div class="shop__title">Denim - Jacket</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$14.99</span>
+                            <span class="shop__discounts">$29.99</span>
+                        </div>
+                        <a href="details.html" class="button  shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+
+                        <a href="details.html" 
+                            class="" 
+                            data-name="Winbreaker Jacket" 
+                            data-price="14.99" 
+                            data-image="assets/img/new-6.png">
+                            <i class="bx bx-cart-alt new_icon"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="shop__content" >
+                        <div class="shop__tag">Sale</div>
+                        <a href="" class="hillo2">
+                        <img src="assets/img/product-2.png"class="shop__img" alt="" ></a>
+                        <div class="shop__title">Clothing Hat Coat</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$11.99</span>
+                            <span class="shop__discounts">$21.99</span>
+                        </div>
+                        <a href="details.html" class="button shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+                    </div>
+                    
+
+                    <div class="shop__content">
+                        <div class="shop__tag">Sale</div>
+                        <a href="" class="hillo3">
+                        <img src="assets/img/product-3.png" class="shop__img" alt="">
+                        </a><div class="shop__title">Fur Jacket</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$5.99</span>
+                            <span class="shop__discounts">$12.99</span>
+                        </div>
+                        <a href="details.html" class="button shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="shop__content">
+                        <div class="shop__tag">New</div>
+                        <a href="" class="hillo4">
+                        <img src="assets/img/product-4.png" class="shop__img" alt="">
+                        </a><div class="shop__title">Flessce Jacket</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$7.99</span>
+                            <span class="shop__discounts">$14.99</span>
+                        </div>
+                        <a href="details.html" class="button shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+
+                        <a href="details.html" 
+                        class="" 
+                        data-name="Winbreaker Jacket" 
+                        data-price="14.99" 
+                        data-image="assets/img/new-6.png">
+                            <i class="bx bx-cart-alt new_icon"></i>
+                        </a>
+                    </div>
+
+
+                    <div class="shop__content">
+                        <div class="shop__tag">Sale</div>
+                        <a href="" class="hillo5">
+                        <img src="assets/img/product-5.png" class="shop__img" alt="">
+                        </a><div class="shop__title">Winbreaker Jacket</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$7.99</span>
+                            <span class="shop__discounts">$14.99</span>
+                        </div>
+                        <a href="details.html" class="button shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="shop__content">
+                        <a href="" class="hillo6">
+                        <div class="shop__tag">Sale</div>
+                        <img src="assets/img/product-6.png" class="shop__img" alt="">
+                        </a><div class="shop__title">Adidas tracksuit</div>
+                        <span class="shop__subtitle">Accssory</span>
+
+                        <div class="shop__prices">
+                            <span class="shop__price">$14.99</span>
+                            <span class="shop__discounts">$29.99</span>
+                        </div>
+                        <a href="details.html" class="button shop__button">
+                            <i class="bx bx-cart-alt shop__icon"></i>
+                        </a>
+
+
+                        <a href="details.html" 
+                        class="" 
+                        data-name="Winbreaker Jacket" 
+                        data-price="14.99" 
+                        data-image="assets/img/new-1.png">
+                            <i class="bx bx-cart-alt new_icon"></i>
+                        </a>
+                    </div>
+
+
+                </div>              
+            </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <h3 class="questions__item-title">Xem thêm.</h3>
+                        </header>
+            
+                        <div class="questions__content">
+                          
+                    <div class="shop__items them grid">
+                        <div class="shop__content">
+                            <div class="shop__tag">New</div>
+                            <a href="details.html"><img href="" src="assets/img/product-1.png" class="shop__img" alt=""></a>
+                            <div class="shop__title">Cartoon Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$14.99</span>
+                                <span class="shop__discounts">$29.99</span>
+                            </div>
+                            <a href="details.html" class="button  shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+                            <a href="details.html" 
+                                class="" 
+                                data-name="Winbreaker Jacket" 
+                                data-price="14.99" 
+                                data-image="assets/img/new-6.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+    
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-2.png" class="shop__img" alt="">
+                            <div class="shop__title">Clothing Hat Coat</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$11.99</span>
+                                <span class="shop__discounts">$21.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-3.png" class="shop__img" alt="">
+                            <div class="shop__title">Fur Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$5.99</span>
+                                <span class="shop__discounts">$12.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">New</div>
+                            <img src="assets/img/product-4.png" class="shop__img" alt="">
+                            <div class="shop__title">Flessce Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$7.99</span>
+                                <span class="shop__discounts">$14.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+                            <a href="details.html" 
+                            class="" 
+                            data-name="Winbreaker Jacket" 
+                            data-price="14.99" 
+                            data-image="assets/img/new-6.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+                        </div>
+    
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-5.png" class="shop__img" alt="">
+                            <div class="shop__title">Winbreaker Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$7.99</span>
+                                <span class="shop__discounts">$14.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-6.png" class="shop__img" alt="">
+                            <div class="shop__title">Adidas tracksuit</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$14.99</span>
+                                <span class="shop__discounts">$29.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+    
+                            <a href="details.html" 
+                            class="" 
+                            data-name="Winbreaker Jacket" 
+                            data-price="14.99" 
+                            data-image="assets/img/new-1.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="shop__content">
+                            <div class="shop__tag">New</div>
+                            <a href="details.html"><img href="" src="assets/img/product-1.png" class="shop__img" alt=""></a>
+                            <div class="shop__title">Cartoon Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$14.99</span>
+                                <span class="shop__discounts">$29.99</span>
+                            </div>
+                            <a href="details.html" class="button  shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+                            <a href="details.html" 
+                                class="" 
+                                data-name="Winbreaker Jacket" 
+                                data-price="14.99" 
+                                data-image="assets/img/new-6.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+    
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-2.png" class="shop__img" alt="">
+                            <div class="shop__title">Clothing Hat Coat</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$11.99</span>
+                                <span class="shop__discounts">$21.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-3.png" class="shop__img" alt="">
+                            <div class="shop__title">Fur Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$5.99</span>
+                                <span class="shop__discounts">$12.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">New</div>
+                            <img src="assets/img/product-4.png" class="shop__img" alt="">
+                            <div class="shop__title">Flessce Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$7.99</span>
+                                <span class="shop__discounts">$14.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+                            <a href="details.html" 
+                            class="" 
+                            data-name="Winbreaker Jacket" 
+                            data-price="14.99" 
+                            data-image="assets/img/new-6.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+                        </div>
+    
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-5.png" class="shop__img" alt="">
+                            <div class="shop__title">Winbreaker Jacket</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$7.99</span>
+                                <span class="shop__discounts">$14.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="shop__content">
+                            <div class="shop__tag">Sale</div>
+                            <img src="assets/img/product-6.png" class="shop__img" alt="">
+                            <div class="shop__title">Adidas tracksuit</div>
+                            <span class="shop__subtitle">Accssory</span>
+    
+                            <div class="shop__prices">
+                                <span class="shop__price">$14.99</span>
+                                <span class="shop__discounts">$29.99</span>
+                            </div>
+                            <a href="details.html" class="button shop__button">
+                                <i class="bx bx-cart-alt shop__icon"></i>
+                            </a>
+    
+    
+                            <a href="details.html" 
+                            class="" 
+                            data-name="Winbreaker Jacket" 
+                            data-price="14.99" 
+                            data-image="assets/img/new-1.png">
+                                <i class="bx bx-cart-alt new_icon"></i>
+                            </a>
+                        </div>
+
+                        </div>
+                     </div>
+                    </div>
+                    
+            <div class="pagination">
+                
+                <i class="bx bx-chevron-left pagination__icon"></i>
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>&middot;&middot;&middot;</span>
+                <span>9</span>
+                <i class="bx bx-chevron-right pagination__icon"></i>
+            </div>
+        </section>
+    </main>
+    <div class="menu" id="product">
+            <h2 class="breadcrumb__title">Other Products</h2><br>
+        <button class="active button" type-phone="all">All</button>
+        <button class="button" type-phone="iPhone">Jacket</button>
+        <button class="button" type-phone="Vivo">T-shirt</button>
+        <button class="button" type-phone="Samsung">Fur coat</button>
+    </div>
+    <!-- Danh sách điện thoại -->
+
+    <div class="list-phone container">
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-1.png" class="shop__img" alt="">
+            <div class="shop__title">Cartoon Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-2.png" class="shop__img" alt="">
+            <div class="shop__title">Clothing Hat Coat</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="Vivo">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-3.png" class="shop__img" alt="">
+            <div class="shop__title">Fur Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class=" phone-item shop__content"type-phone="Samsung">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-4.png" class="shop__img" alt="">
+            <div class="shop__title">Flessce Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-5.png" class="shop__img" alt="">
+            <div class="shop__title">Winbreaker Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-1.png" class="shop__img" alt="">
+            <div class="shop__title">Cartoon Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-2.png" class="shop__img" alt="">
+            <div class="shop__title">Clothing Hat Coat</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="Vivo">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-3.png" class="shop__img" alt="">
+            <div class="shop__title">Fur Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class=" phone-item shop__content"type-phone="Samsung">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-4.png" class="shop__img" alt="">
+            <div class="shop__title">Flessce Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-5.png" class="shop__img" alt="">
+            <div class="shop__title">Winbreaker Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-1.png" class="shop__img" alt="">
+            <div class="shop__title">Cartoon Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-2.png" class="shop__img" alt="">
+            <div class="shop__title">Clothing Hat Coat</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="Vivo">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-3.png" class="shop__img" alt="">
+            <div class="shop__title">Fur Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class=" phone-item shop__content"type-phone="Samsung">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-4.png" class="shop__img" alt="">
+            <div class="shop__title">Flessce Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+        <div class="phone-item shop__content"type-phone="iPhone">
+            <div class="shop__tag">Sale</div>
+            <img src="assets/img/product-5.png" class="shop__img" alt="">
+            <div class="shop__title">Winbreaker Jacket</div>
+            <span class="shop__subtitle">Accssory</span>
+
+            <div class="shop__prices">
+                <span class="shop__price">$5.99</span>
+                <span class="shop__discounts">$12.99</span>
+            </div>
+            <a href="details.html" class="button shop__button">
+                <i class="bx bx-cart-alt shop__icon"></i>
+            </a>
+        </div>
+
+
+
+        <div class="main__modal1">
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+                <!-- Register Form -->
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/details-1.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/details-2.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/details-3.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/details-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Denim - Jacket</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$29.99</span>
+                                <span class="details__discount">$14.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="main__modal1 view" >
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+               
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/product-2.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/product-2.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-2.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Clothing Hat Coat</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$11.99</span>
+                                <span class="details__discount">$21.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close" id="close">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+
+        <div class="main__modal1 view1" >
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+               
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/product-3.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/product-3.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-3.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Fur Jacket</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$5.99</span>
+                                <span class="details__discount">$12.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close" id="close1">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+
+        <div class="main__modal1 view2" >
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+               
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/product-4.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/product-4.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-4.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Flessce Jacket</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$7.99</span>
+                                <span class="details__discount">$14.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close" id="close2">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+
+        <div class="main__modal1 view3" >
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+               
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/product-5.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/product-5.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-5.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Winbreaker Jacket</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$7.99</span>
+                                <span class="details__discount">$14.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close" id="close3">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+
+        <div class="main__modal1 view4" >
+            <div class="modal__overlay1"></div>
+            <div class="modal__body1">
+               
+                <div class="sale-off">
+                <section class="details section container">
+                    <div class="details__container grid">
+                        <div class="product__images grid">
+                            <div class="product__img">
+                                <div class="details__img-tag">New</div>
+                                <img src="assets/img/product-6.png" alt="">
+                            </div>
+                            
+                            <div class="product__img">
+                                <img src="assets/img/product-6.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-6.png" alt="">
+                            </div>
+        
+                            <div class="product__img">
+                                <img src="assets/img/product-6.png" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <div class="details__subtitle">Women > Jacket's</div>
+                            <h3 class="details__title">Adidas tracksuit</h3>
+        
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bx-star"></i>
+                                </div>
+                                <span class="reviews__count">40 + Reviews</span>
+                            </div>
+        
+                            <div class="details__prices">
+                                <span class="details__price">$14.99</span>
+                                <span class="details__discount">$29.99</span>
+                                <span class="discount__percentage">50% OFF</span>
+                            </div>
+        
+                            <div class="details__description">
+                                <h3 class="description__title">Product Details</h3>
+                                <div class="description__details">
+                                    <p> Light Gray solid Top, has a boat  neck, 3/4 sleeves</p>
+                                </div>
+                            </div>
+        
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-minus"></i>
+                                    </span>
+                                    <span class="cart_amount-number">1</span>
+        
+                                    <span class="cart__amount-box">
+                                        <i class="bx bx-plus"></i>
+                                    </span>
+                                </div>
+        
+                                <i class="bx bx-heart cart__amount-heart"></i>
+                            </div>
+        
+                            <a href="#" class="button">Add To Cart</a>
+                        </div>
+                        <div class="sale-off__close" id="close4">x</div>
+                    </div>
+                </div>
+                </section>
+
+
+            </div>
+        </div>
+        <!-- <div class="phone-item" type-phone="iPhone">
+            <img src="https://clickbuy.com.vn/uploads/pro/iphone-16-pro-9020-qugx-300x300-217854.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Vivo">
+            <img src="https://clickbuy.com.vn/uploads/pro/vivo-iqoo-z9-turbo-3863-okdl-300x300-197727.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Vivo"><img src="https://clickbuy.com.vn/uploads/pro/vivo-x200-pro-box-1445-etsv-300x300-218270.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Vivo">
+            <img src="https://clickbuy.com.vn/uploads/pro/vivo-iqoo-neo-9z-pro-plus-5g-box-4177-schk-300x300-218269.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button></div>
+        <div class="phone-item" type-phone="Vivo"><img src="https://clickbuy.com.vn/uploads/pro/vivo-y19s-chinh-hang-2929-eqfq-300x300-218208.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="iPhone">
+            <img src="https://clickbuy.com.vn/uploads/pro/iphone-16-plus-6828-cmho-300x300-217853.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Samsung">
+            <img src="https://clickbuy.com.vn/uploads/pro/samsung-galaxy-s24-ultra-2235-ggmx-300x300-197559.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Samsung">
+            <img src="https://clickbuy.com.vn/uploads/pro/samsung-galaxy-a15-4g-8gb-128gb-chinh-hang-sm-197486.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Samsung">
+            <img src="https://clickbuy.com.vn/uploads/pro/samsung-galaxy-z-flip6-5g-12gb-256gb-chinh-hang-sm-207748.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div>
+        <div class="phone-item" type-phone="Samsung">
+            <img src="https://clickbuy.com.vn/uploads/pro/samsung-galaxy-z-fold6-5g-12gb-256gb-chinh-hang-sm-207747.jpg" alt="">
+            <button class=" button_new phone-item-btn">Mua ngay</button>
+        </div> -->
+    </div>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section"  id="footer_links">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="bx bxs-shopping-bags footer__logo-icon"></i> H-Shopper
+                </a>
+                <p class="footer__description">
+                    Enjoy the biggest sale <br> of your life.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-instagram-alt"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="footer_content" id="about">
+                <h3 class="footer_title">About Us</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">About Us</a></li>
+                    <li><a href="#" class="footer_link">Customer Support</a></li>
+                    <li><a href="#" class="footer_link">Support Center</a></li>
+                </div>
+            </div>
+ 
+            <div class="footer_content">
+                <h3 class="footer_title">Our Services</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">Shop</a></li>
+                    <li><a href="#" class="footer_link">Discounts</a></li>
+                    <li><a href="#" class="footer_link">Shipping mode</a></li>
+                </div>
+            </div>
+            
+            <div class="footer_content">
+                <h3 class="footer_title">Our Company</h3>
+                <div class="footer_links">
+                    <li><a href="#" class="footer_link">Register</a></li>
+                    <li><a href="#" class="footer_link">Contact Us</a></li>
+                    <li><a href="#" class="footer_link">About Us</a></li>
+                </div>
+            </div>
+        </div>
+        <span class="footer_copy">Copyright &copy; HuyDuc-Media</span>
+    </footer>
+
+    <div class="main__modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- Register Form -->
+            <div class="sale-off">
+                <div class="sale-off__container">
+                    <form action="#" class="sale-off__form">
+                        <div class="sale-off__form-group">
+                            <label for="text">Họ tên: </label>
+                            <input type="text" id="text" placeholder="Enter your name">
+                            <span id="error-text"></span>
+
+                            <label for="select">Năm sinh:</label>
+                            <select id="select">
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                            </select>
+                            <label for="email">Gmail:</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <span id="error-email"></span>
+                            
+                            <label for="user">Tên tài khoản:</label>
+                            <input type="text" id="user" placeholder="Enter your username">
+                            <span id="error-user"></span>
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                            <span id="error-password"></span>
+                            
+                            <label for="password">Nhập lại mật khẩu:</label>
+                            <input type="password" id="password-authentication" placeholder="Confirm your password">
+                            <span id="error-password-authentication"></span>
+                            <div class="sign__button">
+                                <button class="sign__button-btn1" type="button" onclick="checked()">Sign Up</button>
+                                <button class="sign__button-btn2" type="button" onclick="reset()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="image-container">
+                        <img src="assets/img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="sale-off__close close">x</div>
+            </div>
+        </div>
+    </div>
+    
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" id="scroll-up" class="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a>
+    <!--=============== STYLE SWITCHER ===============-->
+    <div class="style__switcher">
+        <div class="style__switcher-toggler s__icon">
+          <i class="bx bx-cog bx-spin"></i>
+        </div>
+      
+        <h4>Theme Colors</h4>
+      
+        <div class="theme__colors js-theme-colors">
+          <button 
+            type="button" 
+            data-js-theme-color="color-1" 
+            class="js-theme-color-item color-1 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-2" 
+            class="js-theme-color-item color-2 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-3" 
+            class="js-theme-color-item color-3 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-4" 
+            class="js-theme-color-item color-4 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+          <button 
+            type="button" 
+            data-js-theme-color="color-5" 
+            class="js-theme-color-item color-5 theme__button">
+            <i class="bx bx-check"></i>
+          </button>
+        </div>
+      </div>
+
+
+          <!--=============== LIGHTBOX ===============-->
+    <div class="lightbox">
+        <div class="lightbox__content">
+          <div class="lightbox__close">&times;</div>
+          <img src="assets/img/product-2.png" alt="" class="lightbox__img" />
+          <div class="lightbox__caption">
+            <div class="caption__text">e-shopper</div>
+            <div class="caption__counter">1 of 4</div>
+          </div>
+        </div>
+      
+        <div class="lightbox__controls" onclick="prewItem()">
+          <div class="prev__item">
+            <i class="bx bx-chevron-left"></i>
+          </div>
+          <div class="next__item">
+            <i class="bx bx-chevron-right" onclick="nextItem()"></i>
+          </div>
+        </div>
+      </div>
+        <!--=============== LIGHTBOX ===============-->
+        <script>
+            const productItems = document.querySelectorAll(".product__img"),
+            totalProductItems =productItems.length,
+            lightbox = document.querySelector(".lightbox"),
+            lightboxImg = lightbox.querySelector(".lightbox__img"),
+            lightboxClose = lightbox.querySelector(".lightbox__close"),
+            lightboxCounter =lightbox.querySelector(".caption__counter")
+            
+        let itemIndex = 0;
+        for(let i = 0; i < totalProductItems; i++){
+            productItems[i].addEventListener("click", function(){
+                itemIndex = i;
+                ChangeItem();
+                toggleLightbox();
+            })
+        }
+        function nextItem()
+        {
+            if(itemIndex ==totalProductItems - 1){
+                itemIndex = 0;
+            }
+            else{
+                itemIndex ++
+            }
+            ChangeItem()
+        }
+
+        function prewItem()
+        {
+            if(itemIndex ==totalProductItems - 1){
+                itemIndex = 0;
+            }
+            else{
+                itemIndex ++
+            }
+            ChangeItem()
+        }
+        function toggleLightbox(){
+            lightbox.classList.toggle("open")
+        }
+        function ChangeItem(){
+            imgSrc = productItems[itemIndex].querySelector(".product__img img").getAttribute("src");
+            lightboxImg.src = imgSrc;
+            lightboxCounter.innerHTML = (itemIndex + 1) + "of" +  totalProductItems;
+            }
+
+            lightboxClose.addEventListener("click", () => {
+                toggleLightbox();
+            });
+    
+        </script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--=============== SIGNUP ===============-->
+    <script src="assets/js/details.js"></script>
+    <script src="assets/js/signup.js"></script> 
+    <!--=============== JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

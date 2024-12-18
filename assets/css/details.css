@@ -1,0 +1,218 @@
+.main__modal1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+}
+
+
+.main__modal1.active {
+    display: flex;
+    opacity: 1; 
+    animation: fadeIn 0.4s ease; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); 
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* .modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.main__modal.active .modal__overlay {
+    opacity: 1; 
+}
+
+
+.modal__body {
+    position: relative;
+    z-index: 1000;
+}
+
+.sale-off {
+    width: 500px;
+    border-radius: 5px;
+    background: linear-gradient(#fff, #fafafa);
+    overflow: hidden;
+    padding: 3rem;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(34, 34, 34, 0.5);
+}
+
+.sale-off__container {
+    padding-bottom: 22px;
+    text-align: center;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Modal Overlay */
+.modal__overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal__body1 {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sale-off__container {
+    display: flex;
+    width: 100%;
+}
+
+.sale-off__form {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sale-off__form-group input,
+.sale-off__form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: var(--mb-0-5);
+}
+
+.sale-off__form-group input:focus,
+.sale-off__form-group select:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+.sale-off__form-group span {
+    display: block;
+    font-size: 0.9rem;
+    color: red;
+    
+}
+
+.sale-off__form-group button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sale-off__form-group button:hover {
+    background-color: #ff4500;
+}
+
+.sale-off__form-group button:last-child {
+    background-color: #ddd;
+    color: #333;
+}
+
+.sale-off__form-group button:last-child:hover {
+    background-color: #bbb;
+}
+
+/* Image Container */
+.image-container {
+    flex: 1;
+    margin-top: 15%;
+}
+
+/* Close Button */
+.sale-off__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sale-off__close:hover {
+    color: #ff6347;
+}
+
+/* .sign__button{
+    display: inline-flex;
+    padding-left: 2rem;
+    justify-items: center;
+    width: 100%;
+} */
+.sign__button-btn1{
+    margin-left: 100px;
+}
+@media screen and (max-width: 480px) {
+    .sale-off{
+        width: 380px;
+        border-radius: 5px;
+        background: #efefef;
+        /*background: url(../images/bg_sale_off.jpg);*/
+        background: linear-gradient(#fff,#fafafa);
+        background-size: cover;
+        overflow: hidden;
+        padding: 3rem;
+        position: relative;
+        box-shadow: 0 10px 10px rgb(34, 34, 34);
+    }
+}
