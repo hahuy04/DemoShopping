@@ -506,7 +506,7 @@ canvas.height = 300;
 const icon = {
     x: canvas.width / 2,
     y: canvas.height / 2,
-    size: 100,
+    size: 50,
     angle: 0, // Góc lắc
  // Màu chữ ban đầu
 };
