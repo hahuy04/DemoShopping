@@ -80,9 +80,9 @@ body {
     
 }
 canvas {
-    margin-top: 200px;
-    margin-left: 70px;
-    display: none;
+    margin-top: -118px;
+    left: -100px;
+    display: block;
     position:fixed;
 }
 .loading-overlay {
