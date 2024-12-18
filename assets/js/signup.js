@@ -7,37 +7,38 @@ const overlay = document.querySelector('.modal__overlay');
 const form = document.querySelector('.sale-off__form');
 const loginForm = document.getElementById('login');
 const signupLink = document.querySelector('.Signup a');
+const loginButton = document.getElementById('login-close'); // Nút "Login"
+
 // Đảm bảo modal không hiển thị khi tải lại trang
 modal.classList.remove('active');
 
 // Hiển thị modal khi nhấn vào liên kết "Sign up"
-document.querySelector('.Signup a').addEventListener('click', (e) => {
+signupLink.addEventListener('click', (e) => {
     e.preventDefault(); // Ngăn hành vi mặc định của liên kết
     modal.classList.add('active'); // Hiển thị modal
+    loginForm.style.display = 'none'; // Ẩn form login
 });
 
+// Hiển thị lại form login khi nhấn vào nút "Login"
+loginButton.addEventListener('click', () => {
+    modal.classList.remove('active'); // Ẩn modal
+    loginForm.style.display = 'block'; // Hiển thị lại form login
+});
 
-signupLink.addEventListener('click', function (event) {
-    event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
-    
-    // Hiển thị modal và ẩn form login
-    modal.style.display = 'flex'; // Hoặc sử dụng class để hiển thị
-    loginForm.style.display = 'none';
-  });
-  
-// Đóng modal khi nhấn vào overlay hoặc nút đóng
+// Đóng modal khi nhấn vào nút đóng hoặc overlay
 closeButton.addEventListener('click', () => {
     modal.classList.remove('active');
+    loginForm.style.display = 'block'; // Hiển thị lại form login nếu cần
 });
+
 closesignup.addEventListener('click', () => {
     modal.classList.remove('active');
-});
-closeButton1.addEventListener('click', () => {
-    modal.classList.remove('active');
+    loginForm.style.display = 'block'; // Hiển thị lại form login
 });
 
 overlay.addEventListener('click', () => {
     modal.classList.remove('active');
+    loginForm.style.display = 'block'; // Hiển thị lại form login
 });
 
 // Hàm kiểm tra và xử lý form
@@ -68,8 +69,7 @@ function checked() {
     if (!email) {
         document.getElementById('error-email').textContent = "Chưa nhập email!";
         valid = false;
-    }
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         document.getElementById('error-email').textContent = "Email không hợp lệ!";
         valid = false;
     }
@@ -80,10 +80,9 @@ function checked() {
     if (!password) {
         document.getElementById('error-password').textContent = "Chưa nhập mật khẩu!";
         valid = false;
-    }
-     else if (password.length < 6) {
-    document.getElementById('error-password').textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
-    valid = false;
+    } else if (password.length < 6) {
+        document.getElementById('error-password').textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
+        valid = false;
     }
     if (password !== passwordAuthentication) {
         document.getElementById('error-password-authentication').textContent = "Mật khẩu xác nhận không khớp!";
@@ -95,85 +94,23 @@ function checked() {
         modal.classList.remove('active'); // Ẩn modal sau khi đăng ký thành công
     }
 
-
     if (!passwords) {
         document.getElementById('view-password').textContent = "Chưa nhập mật khẩu!";
         valid = false;
-    }
-
-    else if (passwords.length < 6) {
+    } else if (passwords.length < 6) {
         document.getElementById('view-password').textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
         valid = false;
-        }
-    if(!emails){
-        document.getElementById('view-email').textContent = "Chưa nhập email!";
-        valid = false;   
     }
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emails)) {
+    if (!emails) {
+        document.getElementById('view-email').textContent = "Chưa nhập email!";
+        valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emails)) {
         document.getElementById('view-email').textContent = "Email không hợp lệ!";
         valid = false;
     }
 }
 
 function reset() {
-    // Select the form container
-    const formContainer = document.getElementById('login');
-
-    // Hide the form by changing its display property
-    formContainer.style.display = 'none';
+    // Ẩn form login
+    loginForm.style.display = 'none';
 }
-/*===========CART==========*/
-// const productItems = document.querySelectorAll(".product__img"),
-// totalProductItems =productItems.length,
-// lightbox = document.querySelector(".lightbox"),
-// lightboxImg = lightbox.querySelector(".lightbox__img"),
-// lightboxClose = lightbox.querySelector(".lightbox__close"),
-// lightboxCounter =lightbox.querySelector(".caption__counter")
-
-// let itemIndex = 0;
-// for(let i = 0; i < totalProductItems; i++){
-// productItems[i].addEventListener("click", function(){
-//     itemIndex = i;
-//     ChangeItem();
-//     toggleLightbox();
-// })
-// }
-// function nextItem()
-// {
-// if(itemIndex ==totalProductItems - 1){
-//     itemIndex = 0;
-// }
-// else{
-//     itemIndex ++
-// }
-// ChangeItem()
-// }
-
-// function prewItem()
-// {
-// if(itemIndex ==totalProductItems - 1){
-//     itemIndex = 0;
-// }
-// else{
-//     itemIndex ++
-// }
-// ChangeItem()
-// }
-// function toggleLightbox(){
-// lightbox.classList.toggle("open")
-// }
-// function ChangeItem(){
-// imgSrc = productItems[itemIndex].querySelector(".product__img img").getAttribute("src");
-// lightboxImg.src = imgSrc;
-// lightboxCounter.innerHTML = (itemIndex + 1) + "of" +  totalProductItems;
-// }
-
-// lightboxClose.addEventListener("click", () => {
-//     toggleLightbox();
-// });
-
-
-
-
-
-
