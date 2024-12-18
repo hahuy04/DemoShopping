@@ -214,7 +214,6 @@
         background-size: cover;
         overflow: hidden;
         padding: 3rem;
-        line-height:12px;
         position: relative;
         box-shadow: 0 10px 10px rgb(34, 34, 34);
     }
