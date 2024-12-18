@@ -220,5 +220,11 @@
     }
     .modal__body1{
         margin-top:40px;
-    }}
+    }
+    .product__info{
+        margin-bottom: 70px;
+    }
+    .button{
+    margin-bottom:30px;
+    }
 }
