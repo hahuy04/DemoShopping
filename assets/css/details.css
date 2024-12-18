@@ -98,11 +98,11 @@
 .modal__body1 {
     position: relative;
     z-index: 2;
+    margin-top:40px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 100px;
     line-height:20px;
     max-width: 800px;
     background-color: #fff;
@@ -216,5 +216,8 @@
         padding: 3rem;
         position: relative;
         box-shadow: 0 10px 10px rgb(34, 34, 34);
+    }
+    .modal__body1{
+         margin-top:40px;   
     }
 }
