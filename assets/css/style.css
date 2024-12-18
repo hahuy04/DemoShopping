@@ -2005,9 +2005,9 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin-botton:50px;
-    height: 500px;
+    height: 550px;
     max-width: 800px;
     background-color: #fff;
     border-radius: 8px;
