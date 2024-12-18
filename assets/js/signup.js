@@ -2,6 +2,7 @@
 const modal = document.querySelector('.main__modal');
 const closeButton = document.querySelector('.sale-off__close');
 const closeButton1 = document.querySelector('.close');
+const closesignup = document.querySelector('.sign__button-btn2');
 const overlay = document.querySelector('.modal__overlay');
 const form = document.querySelector('.sale-off__form');
 
@@ -16,6 +17,9 @@ document.querySelector('.Signup a').addEventListener('click', (e) => {
 
 // Đóng modal khi nhấn vào overlay hoặc nút đóng
 closeButton.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
+closesignup.addEventListener('click', () => {
     modal.classList.remove('active');
 });
 closeButton1.addEventListener('click', () => {
@@ -101,7 +105,13 @@ function checked() {
     }
 }
 
+function reset() {
+    // Select the form container
+    const formContainer = document.getElementById('login');
 
+    // Hide the form by changing its display property
+    formContainer.style.display = 'none';
+}
 /*===========CART==========*/
 // const productItems = document.querySelectorAll(".product__img"),
 // totalProductItems =productItems.length,
