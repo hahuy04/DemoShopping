@@ -2115,6 +2115,7 @@ iframe{
 @media screen and (max-width: 480px) {
         .sigup{
         height:760px;
+        line-height:12px;
     }
     .sigup input{
         width:300px;
