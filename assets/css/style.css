@@ -2471,4 +2471,11 @@ iframe {
     .newsletter_form button{
         width:8rem;
     }
+    .questions__item-title{
+        justify-items: center;
+        margin-left: -20px;
+    } 
+    .login a{
+        width: 6.5rem;
+    }
 }
