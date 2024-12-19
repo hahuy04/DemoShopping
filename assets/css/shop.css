@@ -130,6 +130,9 @@ button.active {
     height:20px;
     color: white;
 }
+.new_icon{
+    display: none;
+}
 @media screen and (max-width: 750px) {
     .list-phone {
         width: 70%; /* Chiếm toàn bộ chiều rộng màn hình */
