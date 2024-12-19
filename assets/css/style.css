@@ -627,13 +627,14 @@ input {
 }
 
 .new_button {
-    display: inline-flex;
+    display: 1rem;
     padding: .5rem;
     border-radius: .25rem .25rem .75rem .25rem;
     position: absolute;
     bottom: 0;
-    right: -3rem;
+    right: -9rem;
 }
+
 
 .nav_icon {
     font-size: 1.25rem;
@@ -1919,9 +1920,6 @@ iframe {
     .details__title {
         margin-bottom: var(--mb-0-5);
     }
-     canvas {
-        display: none;
-    }
 }
 
 /* For medium devices */
@@ -2069,8 +2067,12 @@ iframe {
     }
 
     .button {
-        width: 7.5rem;
+        width: 3rem;
         font-size: var(--smaller-font-size);
+    }
+
+    canvas {
+        display: none;
     }
 
 }
@@ -2285,7 +2287,6 @@ iframe {
 
 
 
-
 /* Modal Overlay */
 .modal__overlay {
     position: fixed;
@@ -2460,13 +2461,14 @@ iframe {
         position: relative;
         box-shadow: 0 10px 10px rgb(34, 34, 34);
     }
-        .new_button{
-        padding: .9rem;
-    }
+
     .home-buttons a{
         width: 8rem;
     }
     .discount a{
         width: 8rem;
+    }
+    .newsletter_form button{
+        width:8rem;
     }
 }
