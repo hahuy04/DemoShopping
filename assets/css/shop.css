@@ -206,4 +206,7 @@ button.active {
     .login a{
         text-align: center;
     }
+    .addtocart{
+          width: 8rem;
+    }
 }
