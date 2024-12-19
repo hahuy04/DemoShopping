@@ -2458,6 +2458,7 @@ iframe {
         background-size: cover;
         overflow: hidden;
         padding: 3rem;
+        margin-button: -35px;
         position: relative;
         box-shadow: 0 10px 10px rgb(34, 34, 34);
     }
@@ -2477,5 +2478,8 @@ iframe {
     } 
     .login a{
         width: 6.5rem;
+    }
+    .cart__amount a{
+          width: 8rem;
     }
 }
