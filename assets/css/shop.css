@@ -200,4 +200,7 @@ button.active {
     .questions__item{
         margin-left:-10%;
     }
+    .login a{
+        text-align: center;
+    }
 }
