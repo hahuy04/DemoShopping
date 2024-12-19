@@ -2460,4 +2460,13 @@ iframe {
         position: relative;
         box-shadow: 0 10px 10px rgb(34, 34, 34);
     }
+        .new_button{
+        padding: .9rem;
+    }
+    .home-buttons a{
+        width: 8rem;
+    }
+    .discount a{
+        width: 8rem;
+    }
 }
