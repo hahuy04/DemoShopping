@@ -181,7 +181,7 @@ input {
 
 /*=============== LAYOUT ===============*/
 .container {
-    max-width: 65%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -2478,8 +2478,5 @@ iframe {
     } 
     .login a{
         width: 6.5rem;
-    }
-    .cart__amount a{
-          width: 8rem;
     }
 }
