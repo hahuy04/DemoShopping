@@ -7,38 +7,41 @@ const overlay = document.querySelector('.modal__overlay');
 const form = document.querySelector('.sale-off__form');
 const loginForm = document.getElementById('login');
 const signupLink = document.querySelector('.Signup a');
-const loginButton = document.getElementById('login-close'); // Nút "Login"
+const loginButton = document.getElementById('login-close'); // Nút "Đăng nhập"
 
 // Đảm bảo modal không hiển thị khi tải lại trang
 modal.classList.remove('active');
 
-// Hiển thị modal khi nhấn vào liên kết "Sign up"
+// Hiển thị modal khi nhấn vào liên kết "Đăng ký"
 signupLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Ngăn hành vi mặc định của liên kết
+    e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
     modal.classList.add('active'); // Hiển thị modal
-    loginForm.style.display = 'none'; // Ẩn form login
+    loginForm.style.display = 'none'; // Ẩn form đăng nhập
 });
 
-// Hiển thị lại form login khi nhấn vào nút "Login"
+// Hiển thị lại form đăng nhập khi nhấn vào nút "Đăng nhập"
 loginButton.addEventListener('click', () => {
     modal.classList.remove('active'); // Ẩn modal
-    loginForm.style.display = 'block'; // Hiển thị lại form login
+    loginForm.style.display = 'block'; // Hiển thị lại form đăng nhập
 });
 
 // Đóng modal khi nhấn vào nút đóng hoặc overlay
 closeButton.addEventListener('click', () => {
     modal.classList.remove('active');
-    loginForm.style.display = 'block'; // Hiển thị lại form login nếu cần
+    loginForm.style.display = 'block'; // Hiển thị lại form đăng nhập nếu cần
 });
-
+closeButton1.addEventListener('click', () => {
+    modal.classList.remove('active');
+    loginForm.style.display = 'block'; // Hiển thị lại form đăng nhập nếu cần
+});
 closesignup.addEventListener('click', () => {
     modal.classList.remove('active');
-    loginForm.style.display = 'block'; // Hiển thị lại form login
+    loginForm.style.display = 'block'; // Hiển thị lại form đăng nhập
 });
 
 overlay.addEventListener('click', () => {
     modal.classList.remove('active');
-    loginForm.style.display = 'block'; // Hiển thị lại form login
+    loginForm.style.display = 'block'; // Hiển thị lại form đăng nhập
 });
 
 // Hàm kiểm tra và xử lý form
@@ -110,7 +113,8 @@ function checked() {
     }
 }
 
+// Hàm đặt lại trạng thái
 function reset() {
-    // Ẩn form login
+    // Ẩn form đăng nhập
     loginForm.style.display = 'none';
 }
