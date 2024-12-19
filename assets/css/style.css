@@ -1919,6 +1919,9 @@ iframe {
     .details__title {
         margin-bottom: var(--mb-0-5);
     }
+     canvas {
+        display: none;
+    }
 }
 
 /* For medium devices */
@@ -2068,10 +2071,6 @@ iframe {
     .button {
         width: 7.5rem;
         font-size: var(--smaller-font-size);
-    }
-
-    canvas {
-        display: none;
     }
 
 }
