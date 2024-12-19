@@ -1555,11 +1555,7 @@ iframe{
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1800px){
-    canvas{
-    display: none;
-}
-}
+
 @media screen and (max-width: 1200px) {
 .home__img{
     height: 400px;
@@ -1797,6 +1793,9 @@ iframe{
     .button{
         width: 7.5rem;
         font-size: var(--smaller-font-size);
+    }
+    canvas{
+    display: none;
     }
     
 }
