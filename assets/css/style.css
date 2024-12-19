@@ -2083,8 +2083,8 @@ iframe {
 
     .swiper {
         width: 400px;
+        margin-left:-5%;
     }
-
     .new-swiper1 {
         width: 98%;
     }
