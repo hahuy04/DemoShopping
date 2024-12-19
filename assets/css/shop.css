@@ -197,4 +197,7 @@ button.active {
     .modal__body{
         margin-left:-20px;
     }
+    .questions__item{
+        margin-left:-10%;
+    }
 }
