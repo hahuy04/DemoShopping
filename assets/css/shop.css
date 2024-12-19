@@ -174,6 +174,7 @@ button.active {
     .sale-off{
         width: 300px;
         box-shadow: none;
+        padding:3.5rem;
     }
     .product__images{
         margin-top: -60px;
@@ -189,5 +190,8 @@ button.active {
     }
     .menu .button{
         width:5.2rem;
+    }
+    .sigup{
+        width:700px;
     }
 }
